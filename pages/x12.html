@@ -8,47 +8,47 @@
         </script>
     </head>
     <body>
-        <h1>Welcome to this groove</h1>
+        <h1>scopes</h1>
 
-        <h2>Frank's multiplier</h2>
+        <h2>Scopes, let, CONST, var</h2>
 
-        <form action="javascript:;" class="searchField">
-                    <input type="number" id="firstNum" placeholder="enter first #" required>
-                    <input type="number" id="secondNum" placeholder="enter second #" required>
-                    <span class="wrap">
-                        <input type="submit" onclick="getMyData();" class="button" value="multiply that, Yo!"><span class="fa fa-caret-left"></span>
-                    </span>
-                </form>
+        let changingVar = 6;
+        const MYCONST = changingVar;
+        console.log(MYCONST);
 
-        <script>
 
-        // 3 Types of functions.. ["named", "anonymous", "IIFE's(Immediately Invoked Function Expression)"]
-        //     function nameOfFunction() {
+        function logScope(){
+            var localVar = 3;
+            if(localVar) {
+                let localVar = "I'm different";
+                console.log('nested variable: ', localVar);
+            }
+            console.log('logScope variable: ' + localVar);
+        }
+        logScope();
+
+        function logScope() {
+            let localvar = 2;
+            if(localVar) {
+                let localVar = ""
+            }
+        }
+        //
+        // function getMyData() {
+        //     var num1 = document.getElementById("firstNum").value;
+        //     var num2 = document.getElementById("secondNum").value;
+        //
+        //     document.write("<h2>" + "what is " + num1 + " times " + num2 + " ?" + "</h2>");
+        //     function multiply(a,b) {
+        //         var result = a * b;
+        //         console.log(result);
+        //         return result;
         //
         //     }
-
-
-        function getMyData() {
-            var num1 = document.getElementById("firstNum").value;
-            var num2 = document.getElementById("secondNum").value;
-
-            document.write("<h2>" + "what is " + num1 + " times " + num2 + " ?" + "</h2>");
-            function multiply(a,b) {
-                var result = a * b;
-                console.log(result);
-                return result;
-
-            }
-            var answer = multiply(num1,num2);
-
-            document.write("<h2>" + answer + "</h2>");
-        }
-        // var arr = getMyData();
+        //     var answer = multiply(num1,num2);
         //
-        // var num1 = arr[0];
-        // var num2 = arr[1];
-        //
-        // console.log(num1);
+        //     document.write("<h2>" + answer + "</h2>");
+        // }
 
 
         </script>
