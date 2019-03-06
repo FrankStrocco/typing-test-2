@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>JS Example 24 closures</title>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <script>
+
+        /*
+            function doSomeMath(){
+                var a = 6;
+                var b = 4;
+                var sum = a + b;
+                return sum;
+            }
+
+            var theResult = doSomeMath();
+            console.log('The result is ' + theResult);
+
+            function doSomeMath(){
+                var a = 6;
+                var b = 4;
+                function multiply(){
+                    var result = a * b;
+                    return result;
+                }
+                return multiply;
+            }
+
+            var theResult = doSomeMath();
+            console.log('The result is ' + theResult);
+        */
+
+        function emConverter(pixels) {
+            var baseFontSize = 16;
+
+            function convertIt() {
+                return pixels / baseFontSize;
+            }
+            return convertIt;
+        }
+
+        var smSize = emConverter(12);
+        console.log('Small Size', smSize());
+        var medSize = emConverter(18);
+        console.log('Med Size', medSize());
+        var lgSize = emConverter(24);
+        console.log('Small Size', lgSize());
+        var xlSize = emConverter(40);
+        console.log('Small Size', xlSize());
+
+
+        </script>
+    </body>
+</html>
