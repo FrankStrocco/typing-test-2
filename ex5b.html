@@ -27,12 +27,13 @@
             const FEATURED = document.querySelector('.featuredImg'); // gets figure
             const IMAGE = FEATURED.querySelector('img'); // the image inside of the figure target
 
-            var altText = IMAGE.getAttribute('alt');
+            var altText = IMAGE.getAttribute('alt');x
             var figCapEle = document.createElement('figcaption');
 
-            figCapEle.append
+            figCapEle.append(altText);
+            FEATURED.append(figCapEle);
 
-            IMAGE.setAttribute('alt','coral reef');
+            IMAGE.setAttribute('alt','coral reef'); // re-writing the alt tag
 
             //List of attributes
             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
