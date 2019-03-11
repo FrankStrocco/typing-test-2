@@ -1,0 +1,8 @@
+article {
+    background-color: #ccc;
+    /* border: solid 2px white; */
+}
+.first {
+    border: solid 3px #333;
+    margin-bottom: 1.875rem;
+}

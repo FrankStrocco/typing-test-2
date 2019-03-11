@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <!-- meta:vp -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sea Creatures</title>
+
+        <!-- font awesome-->
+        <link rel="stylesheet" rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" >
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css" type="text/css">
+        <title>Ex 5b Dom -Add Dom elements</title>
+    </head>
+    <body>
+
+        <header class="container">
+            <h1>coral Reefs</h1>
+            <h2>They need our help to survive</h2>
+            <figure class="featuredImg">
+            <img src="images/c1.jpg" alt="A photo of a healthy coral reef" class="img-fluid"></figure>
+        </header>
+
+        <script>
+
+            const FEATURED = document.querySelector('.featuredImg'); // gets figure
+            const IMAGE = FEATURED.querySelector('img'); // the image inside of the figure target
+
+            var altText = IMAGE.getAttribute('alt');
+            var figCapEle = document.createElement('figcaption');
+
+            figCapEle.append
+
+            IMAGE.setAttribute('alt','coral reef');
+
+            //List of attributes
+            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+            //to reasign id , use:
+            //document.querySelector(#cover).id = "whatEver"
+            // classlist is read only so use className to change name
+            // document.querySelector('.masterhead').classList;
+            // document.querySelector('.masterhead').classList[1];
+            // document.querySelector('.masterhead').className = "whatever";
+
+
+            // document.querySelector.('masthead').classList.add("newClass")
+            // document.querySelector.('masthead').classList.remove("newClass")
+
+            // removes and replaces a class with the toggle method
+            // document.querySelector.('masthead').classList.toggle("newClass")
+
+            // returns true or false
+            // document.querySelector.('masthead').classList.contains("newClass")
+
+            // removes and replaces
+            // document.querySelector.('masthead').classList.replace("newClass")
+
+            //
+
+            // const DBTN = document.querySelector('.masthead a.discover');
+            //
+            // if (DBTN.hasAttribute('target')) {
+            //     console.log(DBTN.getAttribute('target'));
+            // }else {
+            //     DBTN.setAttribute('target', '_blank');
+            // }
+            //
+            //
+            // console.log(DBTN.attributes);
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

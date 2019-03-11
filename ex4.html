@@ -11,9 +11,9 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
+        <title>Ex 4 Dom -Access and Attribute Properties</title>
     </head>
     <body>
-
         <!-- Header Section -->
 
         <!-- section#cover.bg-light>div.container>div.row>article>h1{Sea Creatures}+h2{The Ocean is worth saving, make a difference today}+p>lorem^p>a*2^^div>img -->
@@ -25,7 +25,7 @@
                         <h1 class="display-4">Sea Creatures</h1>
                         <h2>The Ocean is worth saving, make a difference today</h2>
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, omnis! Officiis consequatur perferendis neque facilis repudiandae consequuntur, porro eveniet fugiat iure. Nesciunt, quibusdam. Labore magnam dolorum, optio ipsum error itaque.</p>
-                        <p class="text-center"><a href="#" class="btn btn-light mr-2" >Discover More</a>
+                        <p class="text-center"><a href="#" class="btn btn-light mr-2 discover" >Discover More</a>
                         <a href="#" class="btn btn-outline-light" >Join Us</a></p>
 
                         <!-- p>a.btn.btn-outline-light{&darr;} -->
@@ -241,10 +241,40 @@
             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
             //to reasign id , use:
             //document.querySelector(#cover).id = "whatEver"
+            // classlist is read only so use className to change name
+            // document.querySelector('.masterhead').classList;
+            // document.querySelector('.masterhead').classList[1];
+            // document.querySelector('.masterhead').className = "whatever";
 
-            document.querySelector('.masterhead').classList;
-            document.querySelector('.masterhead').classList[1];
-            document.querySelector('.masterhead').className = "whatever";
+
+            // document.querySelector.('masthead').classList.add("newClass")
+            // document.querySelector.('masthead').classList.remove("newClass")
+
+            // removes and replaces a class with the toggle method
+            // document.querySelector.('masthead').classList.toggle("newClass")
+
+            // returns true or false
+            // document.querySelector.('masthead').classList.contains("newClass")
+
+            // removes and replaces
+            // document.querySelector.('masthead').classList.replace("newClass")
+
+            //
+
+            const DBTN = document.querySelector('.masthead a.discover');
+
+            if (DBTN.hasAttribute('target')) {
+                console.log(DBTN.getAttribute('target'));
+            }else {
+                DBTN.setAttribute('target', '_blank');
+            }
+
+
+            console.log(DBTN.attributes);
+
+
+
+
 
 
         </script>

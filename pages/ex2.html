@@ -11,9 +11,10 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
+        <title>Ex 3 Dom -Access and change name with methods</title>
     </head>
     <body>
-
+        <h1>Ex 3 Dom -Access and change name with methods</h1>
         <!-- Header Section -->
 
         <!-- section#cover.bg-light>div.container>div.row>article>h1{Sea Creatures}+h2{The Ocean is worth saving, make a difference today}+p>lorem^p>a*2^^div>img -->
@@ -241,10 +242,24 @@
             // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
             //to reasign id , use:
             //document.querySelector(#cover).id = "whatEver"
+            // classlist is read only so use className to change name
+            // document.querySelector('.masterhead').classList;
+            // document.querySelector('.masterhead').classList[1];
+            // document.querySelector('.masterhead').className = "whatever";
 
-            document.querySelector('.masterhead').classList;
-            document.querySelector('.masterhead').classList[1];
-            document.querySelector('.masterhead').className = "whatever";
+
+            // document.querySelector.('masthead').classList.add("newClass")
+            // document.querySelector.('masthead').classList.remove("newClass")
+
+            // removes and replaces a class with the toggle method
+            // document.querySelector.('masthead').classList.toggle("newClass")
+
+            // returns true or false
+            // document.querySelector.('masthead').classList.contains("newClass")
+
+            // removes and replaces
+            // document.querySelector.('masthead').classList.replace("newClass")
+
 
 
         </script>
