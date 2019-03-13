@@ -4,12 +4,58 @@
         <meta charset="utf-8">
         <!-- meta:vp -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="scripts/events.js" defer></script>
-        <link rel="stylesheet" href="css/events.css" type="text/css">
-        <title>clock</title>
+        <!-- <script src="../scripts/events.js" defer></script> -->
+        <link rel="stylesheet" href="../css/events.css" type="text/css">
+        <title>Events</title>
     </head>
     <body>
+        <!-- header>h1{Sea Life}^seciton>article*3>h3{Some heading $}+p>{lorem} -->
+        <header>
+            <h1>Sea Life</h1>
+        </header>
+        <seciton>
+            <article>
+                <h3>Some heading 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque consequatur sint harum ipsa ut maxime vel nihil ea odit esse aspernatur recusandae quod ipsum, quos optio similique velit dolore blanditiis.</p>
+            </article>
+            <article>
+                <h3>Some heading 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem atque nobis molestias quo debitis! Ratione fugit hic, veritatis mollitia, architecto nam consequatur unde maxime iure praesentium molestiae quas voluptatem? Est.</p>
+            </article>
+            <article>
+                <h3>Some heading 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At voluptatibus voluptas reprehenderit cum saepe. Harum temporibus accusamus est, nulla minima obcaecati, beatae voluptatibus dolorem, suscipit inventore quae nesciunt recusandae quis.</p>
+            </article>
+        </seciton>
 
+        <aside>
+            <h1>Coral Reefs</h1>
+            <h2>They are important for everyone</h2>
+            <div>
+                <a href="#" class="discoverBtn" >Discover More</a>
+                <a href="#" class="tripBtn" >Join us</a>
+            </div>
+            <p class="tripMsg">we are so sorry but all of our 2019 trips are currently booked. Please check back in the fall when new 2020 trip information will be available.</p>
+        </aside>
+        <article>
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, debitis fuga quis quod? Maiores recusandae veritatis tenetur nam dolorem deserunt pariatur et unde. Voluptatum ducimus aliquid, eveniet enim molestiae, cumque!</p>
+        </article>
+        <footer>&copy; 2019</footer>
+
+        <script>
+            const TRIPBTN = document.querySelector('.tripBtn')
+            const MSG = document.querySelector('.tripMsg')
+
+            MSG.classList.add('hideIt');
+
+            function showMsg(e) {
+                e.preventDefault();
+                MSG.classList.toggle('hideIt');
+            }
+
+            TRIPBTN.onclick = showMsg;
+        </script>
     </body>
 
 </html>
