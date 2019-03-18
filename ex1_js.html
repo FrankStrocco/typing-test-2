@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <title>Example 1</title>
+
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <h1>Hello There</h1>
+        <a href="#" onClick="alert('You clicked!')">click me</a>
+        <h3 id="clickMe" >Hover on me, YO</h3>
+
+        <button id="newWin" >New Window</button>
+
+        <script>
+            var subHead = document.getElementById('clickMe');
+            //var subHead = document.querySelector('#clickMe');
+            subHead.addEventListener('mouseenter', function (){alert('you hovered');}, false);
+
+            //new window function
+            function openNewWin(){ 
+                open('http://google.com', '_blank')
+            };
+            document.getElementbyId('newWin').addEventListener('click', openNewWin, false);
+
+        </script>
+    </body>
+</html>
