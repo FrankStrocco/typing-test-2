@@ -5,7 +5,8 @@ const RESET_BTN = document.querySelector('#reset');
 const THE_TIMER = document.querySelector('.timer');
 
 var timer = [0,0,0,0];
-
+var interval; //declaring global interval
+var timerRunning = false;
 // helper function
 
 function leadingZero(time) {
@@ -39,6 +40,18 @@ function runTimer(){
 
 function spellCheck(){
     let textEntered = testArea.value;
+    let origTextMatch = ORIG_TEXT.substring(0, textEntered.length);
+    if (textEntered == ORIG_TEXT){
+        TEST_WRAPPER.style.borderColor = '#1ccc9e';
+        timerRunning = false;
+
+    } else {
+        if (textEntered == origTextMatch) {
+            TEST_WRAPPER.style.borderColor = '#5499D0';
+        } else {
+            TEST_WRAPPER.style.borderColor = 'orangered';
+        }
+    }
     console.log(textEntered);
 }
 
@@ -46,17 +59,24 @@ function spellCheck(){
 
 function start(){
     let textEnteredLength = testArea.value.length
-    if (textEnteredLength === 0) {
-        setInterval(runTimer, 10);
+    if (textEnteredLength === 0 && timerRunning == false) {
+        //setInterval(runTimer, 10);
+        timerRunning = true;
+        interval = setInterval(runTimer, 10);
     }
-    console.log(textEnteredLength);
 
 }
 
 // reset all
 
 function reset(){
-    console.log('Reset Button Has Been Pressed');
+    clearInterval(interval);
+    interval = null;
+    timer = [0,0,0,0];
+    THE_TIMER.innerHTML = '00:00:00'
+    TEST_AREA.value = '';
+    timerRunning = false;
+    TEST_WRAPPER.style.borderColor = '#888';
 }
 
 testArea.addEventListener('keyup', spellCheck, false);
